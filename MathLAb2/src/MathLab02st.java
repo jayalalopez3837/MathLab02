@@ -6,7 +6,7 @@
 import javax.swing.JOptionPane;
 
 
-public class MathLab2
+public class MathLab02st
 {
 	public static void main (String args[])
 	{   
@@ -55,8 +55,8 @@ class Rational
 //	getRational 
 	public String getRational()
 	{
-		double gcf = getGCF(num,den);
-		return (num/gcf) + "/" + (den/gcf);
+		
+		return num + "/" + den;
 	}
 //	getOriginal
 	public String getOriginal()
@@ -65,6 +65,14 @@ class Rational
 	}
 //	reduce
 
+	public void reduce()
+	{
+		int gcf = getGCF(onum,oden);
+		num = onum/gcf;
+		den = oden/gcf;
+	}
+	
+	
 	private int getGCF(int n1,int n2)
 	{
 		int rem = 0;
